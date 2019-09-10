@@ -6,7 +6,12 @@
  */
 
 module.exports = {
-  
+	
+  version: function (req, res) {
+    return res.json({
+      version: '0.1'
+    });
+  }
 
 };
 
