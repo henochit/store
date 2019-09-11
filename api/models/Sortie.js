@@ -10,9 +10,12 @@ module.exports = {
   attributes: {
      date: { type: 'ref', columnType: 'datetime'},
      quantite: 'number',
-     produit: 'number',
     createdAt: { type: 'ref', columnType: 'datetime', autoCreatedAt: true, },
     updatedAt: { type: 'ref', columnType: 'datetime', autoUpdatedAt: true, },
+
+    produit: {
+      model: 'produit'
+    },
   },
 
 };

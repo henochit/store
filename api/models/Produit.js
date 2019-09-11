@@ -12,12 +12,18 @@ module.exports = {
               type: 'string',
               unique: true
             },
-     nom: 'string',
-     packetage: 'number',
-     stock: 'number',
-     categorie: 'number',
+   nom: 'string',
+   stock: 'string',
     createdAt: { type: 'ref', columnType: 'datetime', autoCreatedAt: true, },
     updatedAt: { type: 'ref', columnType: 'datetime', autoUpdatedAt: true, },
+
+    categorie: {
+      model: 'categorie'
+    },
+
+    packetage: {
+      model: 'packetage'
+    }
   },
 
 };

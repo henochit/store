@@ -14,6 +14,11 @@ module.exports = {
                 },
         createdAt: { type: 'ref', columnType: 'datetime', autoCreatedAt: true, },
         updatedAt: { type: 'ref', columnType: 'datetime', autoUpdatedAt: true, },
+
+        produits: {
+		      collection: 'produit',
+		      via: 'categorie'
+		    }
   },
 
 };
